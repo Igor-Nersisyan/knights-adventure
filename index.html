@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Knight's Adventure - Indie Game</title>
+    <meta name="description" content="Веб-игра про рыцаря в стиле инди-платформера с пиксельной графикой">
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            background: linear-gradient(135deg, #87CEEB, #4682B4);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            font-family: 'Courier New', monospace;
+        }
+        
+        #gameContainer {
+            border: 6px solid #8B4513;
+            border-radius: 10px;
+            background: linear-gradient(180deg, #87CEEB, #228B22);
+            position: relative;
+            box-shadow: 0 0 20px rgba(0,0,0,0.5);
+        }
+        
+        canvas {
+            display: block;
+            image-rendering: pixelated;
+            border-radius: 4px;
+        }
+        
+        #ui {
+            position: absolute;
+            top: 15px;
+            left: 15px;
+            color: #FFD700;
+            font-size: 18px;
+            text-shadow: 2px 2px 4px #000;
+            background: rgba(0,0,0,0.3);
+            padding: 10px;
+            border-radius: 8px;
+        }
+        
+        #controls {
+            position: absolute;
+            bottom: 15px;
+            left: 15px;
+            color: #FFD700;
+            font-size: 14px;
+            text-shadow: 1px 1px 2px #000;
+            background: rgba(0,0,0,0.3);
+            padding: 8px;
+            border-radius: 6px;
+        }
+        
+        .health-bar {
+            width: 200px;
+            height: 20px;
+            background: #333;
+            border: 2px solid #FFD700;
+            border-radius: 10px;
+            overflow: hidden;
+            margin-top: 5px;
+        }
+        
+        .health-fill {
+            height: 100%;
+            background: linear-gradient(90deg, #FF0000, #FFFF00, #00FF00);
+            transition: width 0.3s ease;
+        }
+    </style>
+</head>
+<body>
+    <div id="gameContainer">
+        <canvas id="gameCanvas" width="1200" height="800"></canvas>
+        <div id="ui">
+            <div>🏰 Knight's Adventure</div>
+            <div>❤️ Health: <span id="health">100</span>/100</div>
+            <div class="health-bar"><div class="health-fill" id="healthBar" style="width: 100%"></div></div>
+            <div>⚔️ Score: <span id="score">0</span></div>
+            <div>👹 Enemies Killed: <span id="killed">0</span></div>
+            <div>⏱️ Wave: <span id="wave">1</span></div>
+        </div>
+        <div id="controls">
+            <div>🎮 Controls:</div>
+            <div>WASD/Arrows: Move & Jump</div>
+            <div>Space: Attack</div>
+            <div>R: Restart when dead</div>
+        </div>
+    </div>
+    
+    <script src="game.js"></script>
+</body>
+</html>
