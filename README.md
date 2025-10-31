@@ -6,7 +6,7 @@
 
 ## 🎮 Играть онлайн
 
-**[▶️ ИГРАТЬ СЕЙЧАС]([https://your-username.github.io/knights-adventure](https://igor-nersisyan.github.io/knights-adventure/))**
+**[▶️ ИГРАТЬ СЕЙЧАС]([(https://igor-nersisyan.github.io/knights-adventure/)])**
 
 ## 📖 Описание
 
@@ -117,3 +117,4 @@ MIT License - используйте свободно!
 
 
 **Понравилась игра? Поставьте ⭐ звездочку!**
+
